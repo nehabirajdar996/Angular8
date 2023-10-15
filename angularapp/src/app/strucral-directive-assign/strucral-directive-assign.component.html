@@ -1,0 +1,23 @@
+
+
+
+<p>strucral-directive-assign works!</p>
+<!-- <div>
+    <label>select Me</label>
+    <input type="checkbox" (change) = "onchange()">
+</div>
+
+
+<div >
+  <p *ngIf="check" >content show, when condition true</p>
+</div> -->
+
+
+<div>
+    <label>Select Me</label>
+    <input (change)="onChange()" type="checkbox"/>
+</div>
+
+<div>
+    <p *ngIf="select">Data is showing after clicking checkbox</p>
+</div>

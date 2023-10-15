@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left shadow rounded py-5">
+          <div><h3>Simple Form Practice</h3></div>
+          <form #practiceForm="ngForm" (ngSubmit)="onClickSubmit(practiceForm)">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" required class="form-control" name="username" placeholder="Enter Username" [(ngModel)]="defaultUser">
+                <small *ngIf="defaultUser">User name is : {{defaultUser}}</small>
+            </div>
+            <div class="form-group">
+                <label for="email"> Email</label>
+                <input  type="email" required class="form-control" name="email" placeholder="Enter Email" ngModel #mailVal="ngModel">
+                <small class="text-danger" *ngIf="!mailVal.valid && mailVal.touched">Enter valid email</small>
+            </div>
+            <div class="form-group">
+                <label for="course">Select Course</label>
+                <select name="c" id="c" class="form-control" [ngModel]="defaultCourseVal">
+                    <option [value]="c" *ngFor="let c of courses;">{{c}}</option>
+                </select>
+            </div>
+         
+            <div class="form-group" *ngFor="let g of genders">
+                <input type="radio" class="custom-control-input" name="g" id="{{g.id}}" value="{{g.value}}" [ngModel]="defaultGen">
+                 <label for="{{g.id}}" class="custom-control-label">{{g.value}}</label>
+            </div>
+
+             <button type="submit" class="btn btn-success" [disabled]="!practiceForm.valid">Submit</button>
+          
+            </form>
+        </div>
+    </div>
+</div>

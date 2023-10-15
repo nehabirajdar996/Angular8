@@ -1,0 +1,25 @@
+<p>space works!</p>
+<input type="text" (blur)="serach(space.value)" #space>
+
+<div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                <th>Title</th>
+                <th>wordcount</th>
+                <th>snippet</th>
+            </tr>
+            </thead>
+             <tbody>
+                <tr *ngFor="let space of arraspace ">
+                    <td>{{space.title}}</td>
+                    <!-- <td> <a [routerLink]="['/postdetails', post.id]">{{post.id}}</a> </td> -->
+                    <td>{{space.wordcount}}</td>
+                    <td>{{space.snippet}}</td>
+
+                </tr>
+             </tbody>
+        </table>
+    </div>
+</div>

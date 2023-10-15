@@ -1,0 +1,9 @@
+<p style="background-color: beige;"><strong>comp2</strong></p>
+
+<div id="c2">
+    <p>First Name:<strong>{{fullname.firstname}}</strong> </p>
+    <p>Last Name:<strong>{{fullname.lastname}}</strong> </p> 
+  <label for="fullName">Full Name:</label>
+  <input type="text" #fname placeholder="Enter full name">
+  <button (click)="displayNames(fname)">Full Name</button>
+</div>

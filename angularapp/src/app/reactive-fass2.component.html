@@ -1,0 +1,88 @@
+
+
+<div class="container text-center">
+    <div class="row">
+      <div class="col-2" id="c">
+        <div class="user-details-container">
+          <img src="https://randomuser.me/api/portraits/lego/3.jpg" width="80" height="80">
+          <span class="user-title">Homerao Simpson</span>
+          <p class="user-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Totam, autem iste! Incidunt, saepe,  minus deserunt 
+            omnis sequi.</p>
+        </div>
+      </div>
+      <div class="col-5" id="c">
+        <form [formGroup]="myRegsForm">
+          <h3>User Details</h3>
+        <!-- <div class="formGroup"> -->
+          <mat-form-field  class="formGroup col-12">
+            <mat-label for="fullname"> Fullname </mat-label>
+            <input required matInput placeholder="Enter Fullname" class="form-control" formControlName="fullname" type="text" value="fullname">
+          </mat-form-field>
+        <!-- </div> -->
+        <!-- <div class="formGroup"> -->
+          <mat-form-field class="formGroup col-12" >
+            <mat-label for="yourbirthday"> Your birthday</mat-label>
+            <input required matInput type="date" class="form-control" formControlName="yourbirthday">
+          </mat-form-field>
+        <!-- </div> -->
+        <!-- <div class="formGroup"> -->
+          <mat-form-field class="formGroup col-12">
+            <mat-label>Gender</mat-label>
+            <select matNativeControl required class="form-control" formControlName="gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </mat-form-field>
+        <!-- </div> -->
+        <div class="row">
+         <mat-form-field class="formGroup col-4">
+              <mat-label>Country</mat-label>
+              <select matNativeControl required class="form-control " formControlName="country">
+                <option value="India">India</option>
+                <option value="UK">UK</option>
+                <option value="Canada">Canada</option>
+              </select>
+            </mat-form-field>
+          
+            <mat-form-field class="formGroup col-8">
+              <mat-label>Phone</mat-label>
+              <span matPrefix>+1 &nbsp;</span>
+             <input type="tel" matInput placeholder="555-555-1234" class="form-control" formControlName="phone">
+            </mat-form-field>
+        </div>
+          <div class="formGroup">
+            <mat-form-field class="col-12">
+              <mat-label>Bio</mat-label>
+              <textarea matInput class="form-control" formControlName="bio"></textarea>
+            </mat-form-field>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-5" id="c">
+        <form [formGroup]="myRegsForm">
+          <!-- <mat-form-field class="full-width">
+            <input matInput maxlength="25" placeholder="Username" 
+            formControlName="username" required>
+            <mat-error *ngFor="let validation of account_validation_messages.username">
+              <mat-error class="error-message" *ngIf="accountDetailsForm.get('username')
+              .hasError(validation.type) && (accountDetailsForm.get('username').dirty ||
+               accountDetailsForm.get('username').touched)">{{validation.message}}</mat-error>
+            </mat-error>
+          </mat-form-field> -->
+         
+          <h3>Account Details</h3>
+          <div class="formGroup">
+            <mat-form-field  class="col-12">
+              <mat-label for="username"> Username </mat-label>
+              <input required matInput placeholder="Enter Username" class="form-control" formControlName="username" type="text" value="username">
+            </mat-form-field>
+          </div>
+      
+        </form>
+      </div>
+    </div>
+  </div>
+
+ 

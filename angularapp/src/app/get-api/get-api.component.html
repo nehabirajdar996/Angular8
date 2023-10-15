@@ -1,0 +1,38 @@
+<p>get-api works!</p>
+
+<header>
+    <nav class="head">
+        <div class="container text-center">
+            <div class="row">
+             <div class="col"><strong>Gender</strong></div>
+              <div class="col"><strong>Name</strong></div>
+              <div class="col"><strong>Location</strong></div>
+              <div class="col"><strong>Country</strong></div>
+              <div class="col"><strong>State</strong></div>
+           
+            </div>
+        </div>
+    </nav>
+  </header>
+<div class="container text-center bg-secondary text-white">
+    <div class="row row-cols-5" *ngFor="let a of array">
+        <!-- col 1 -->
+      <div class="col">{{a.gender}}</div>
+        
+      <!-- col-2 -->
+      <div class="col">
+     {{a.name.title}}  {{a.name.first}} {{a.name.last}}</div>
+     
+        
+      <!-- col - 3 -->
+      <div class="col">
+      {{a.location.street.number}}, {{a.location.street.name}}</div>
+    
+      <!-- col-4 -->
+     <div class="col">{{a.location.country}}</div>
+    
+      <!-- col-5 -->
+      <div class="col">{{a.location.state}}</div>
+       </div>
+    </div>
+

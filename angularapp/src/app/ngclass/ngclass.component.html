@@ -1,0 +1,21 @@
+<p>ngclass works!</p>
+<h4>NgCLass</h4>
+
+<ul *ngFor="let p of people">
+    <li [ngClass]="{
+        'text-success': p.country == 'UK',
+        'text-primary': p.country == 'USA',
+        'text-danger': p.country == 'HK'
+    }">
+    {{p.name}} ({{p.country}})
+    </li>
+</ul>
+<div class="row" *ngFor ="let g of getdata">
+    <h2>firebase data</h2>
+    <p>
+   * <strong>id</strong> : {{g.id}} <br>   
+   * <strong>content</strong> : {{g.content}}<br>
+   * <strong>title</strong> : {{g.title}}<br>
+</p>
+</div>
+

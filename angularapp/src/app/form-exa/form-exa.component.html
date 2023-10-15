@@ -1,0 +1,33 @@
+<p>form-exa works!</p>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <div style="background-color:blue"><h2>Sign Up Form</h2></div>
+            <form #signUpForm="ngForm" (ngSubmit)="onSubmitForm(signUpForm)">
+                <div class="form-group">
+                    <label for="First Name"> First Name</label>
+                  <input required type="text" class="form-control" id="First Name" name="First Name" ngModel
+                  placeholder="Enter firstName">
+                </div>
+                <div class="form-group">
+                    <label for="Last Name">Last Name</label>
+                  <input required type="text" class="form-control" id="Last Name" name="Last Name" ngModel
+                  placeholder="Enter lastName">               
+                 </div>
+                <div class="form-group">
+                    <label for="Email"> Email</label>
+                  <input required type="email" class="form-control" id="Email" name="Email" ngModel
+                  placeholder="Enter email ID">
+                </div>
+                <div class="form-group">
+                    <label for="password">password</label>
+                  <input required type="password" class="form-control" id="password" name="password" ngModel
+                  placeholder="Enter password">
+                </div>
+                <button type="submit" class="btn btn-success" [disabled]="!signUpForm.valid">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<p>reactiveform works!</p>
+
+<div class="container">
+            <Form action="" [formGroup]="myReactiveform" (ngSubmit)="onsubmit()">
+            <div>
+            <label for="">email</label>
+            <input FormControlName="email" type="email" placeholder="enter email address">
+        </div>
+        <div>
+            <label>pass</label>
+            <input FormControlName="pass" type="password" placeholder="enter password">
+        </div>
+        <div class="div">
+            <label>confirm</label>
+            <input FormControlName="confirm" type="password" placeholder="enter password">
+        </div>
+        <button type="submit">sumbit</button>
+        </Form>
+    </div>
+   

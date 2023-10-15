@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <div style="text-align: center;" id="hed"><h4>Reactive Form</h4></div>
+            <div><strong>User details</strong></div>
+            <form [formGroup]="myReactiveforms">
+           <div formGroupName="userDetails">
+            <div class="form group">
+                <label for="Full Name">Full Name</label>
+                <input type="text" class="form-control" formControlName="Full Name" placeholder="enter your full name">
+            </div>
+            <div class="form group">
+                <label for="Your birthday">Your birthday</label>
+                <input type="date" class="form-control" formControlName="Your birthday">
+            </div>
+            <div class="form group">
+                <label for="Gender">Gender</label>
+                <select formControlName="Gender" class="form-control">
+                 <option>Male</option>
+                 <option>Female</option>
+                </select>
+            </div>
+            <div class="form group">
+                <label for="Country">Country</label>
+                <select formControlName="Country" class="form-control">
+                    <option>India</option>
+                    <option>United States</option>
+                    <option>Uk</option>
+                    <option>Chaina</option>
+                </select>
+            </div>
+            <div class="form group">
+                <label for="Phone">Phone</label>
+                <input type="tel" formControlName="Phone" class="form-control" placeholder="enter phone number">
+                <small *ngIf="!myReactiveforms.get('userDetails.Phone').touched"><small id="mb"><strong>Mobile:</strong>094231234</small>    <small><strong>Fixed:</strong> 2123 1234</small> </small>
+            </div><br>
+            <div class="form group">
+                <label for="Bio">Bio</label>
+                <textarea formControlName="Bio" cols="50" rows="5" maxlength="256" class="form-control" placeholder="text length should not be more than 256 chara"> </textarea>
+                <small *ngIf="!myReactiveforms.get('userDetails.Bio').touched"> Tell us about yourself</small>
+            </div>
+            </div>
+            <div><strong>Account details</strong></div>
+            <div formGroupName="accountDetails">
+             <div class="form group">
+                <label for="username">username</label>
+                <input type="text" formControlName="username" class="form-control" placeholder="enter username">
+                <small class="text-danger" *ngIf="!myReactiveforms.get('accountDetails.username').valid && myReactiveforms.get('accountDetails.username').touched">Username must be at least 5 characters long<br>Your username must contain only numbers and letters</small>
+             </div>
+             <div class="form group">
+                <label for="email">email</label>
+                <input type="email" class="form-control" formControlName="email" >
+                <small class="text-danger" *ngIf="!myReactiveforms.get('accountDetails.email').valid && myReactiveforms.get('accountDetails.email').touched">Please enter email ends with @yahoo.com</small>
+
+             </div>
+             <div class="form group">
+                <label for="password">password</label>
+                <input type="password" class="form-control" formControlName="password">
+                <small class="text-danger" *ngIf="!myReactiveforms.get('accountDetails.password').valid && myReactiveforms.get('accountDetails.password').touched">password must be atleast 5 chara long<br>Your password must contain at least one uppercase,one lowercase,and <br>onenumber</small>
+             </div>
+            
+             <div class="form group">
+                <label for="confirm password">confirm password</label>
+                <input type="password"  class="form-control" formControlName="confirm password">
+                <small class="text-danger" *ngIf="myReactiveforms.get('accountDetails.password').value !== myReactiveforms.get('accountDetails.confirm password').value && myReactiveforms.get('accountDetails.confirm password').touched">password missmatch</small> 
+            </div>
+             <div class="form group">
+                <input type="checkbox" formControlName="terms" >
+                <label for="terms">I accept terms and conditions</label>
+                <!-- *ngIf="checkboxForm.controls.checkboxValue.errors?.pattern" -->
+             </div>
+             <button type="submit" >sumbit</button>
+            </div>
+        </form>
+        </div>
+    </div>
+
+</div>

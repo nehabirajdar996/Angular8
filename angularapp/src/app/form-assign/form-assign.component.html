@@ -1,0 +1,80 @@
+<p>form-assign works!</p>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <form>
+            <div class="form-group">
+                <label for="First Name"> First Name</label>
+              <input required type="text" class="form-control" id="First Name" name="First Name" ngModel
+              placeholder="Enter firstName" minlength="5" maxlength="5">
+            </div>
+            <div class="form-group">
+                <label for="Last Name"> Last Name</label>
+              <input required type="text" class="form-control" id="Last Name" name="Last Name" ngModel
+              placeholder="Enter LastName" maxlength="10">
+            </div>
+            <div class="form-group">
+                <label for="Age">Age</label>
+              <input required type="number" class="form-control" id="Age" name="Age" ngModel  pattern="/^(?:1[8-9]|[2-5][0-9]|20)$/"
+              placeholder="Enter Age">
+              <small  class="text-danger" *ngIf="!email.valid && email.touched">please enter valid age</small>
+            </div>
+            <div class="form-group">
+                <label for="Email">Email</label>
+              <input required type="email" class="form-control" id="Email" name="Email" ngModel
+              placeholder="Enter Email"   #email="ngModel" pattern="^[a-zA-Z0-9._%+-]+@yahoo.com$">
+              <small class="text-danger" *ngIf="!email.valid && email.touched">Please enter email @yahoo.com</small>
+            </div>
+            <div class="form-group">
+                <label for="Phone">phone</label>
+              <input maxlength="10"  type="tel" class="form-control" id="Phone" name="Phone" ngModel  
+              placeholder="Enter phone number">
+            </div>
+            <div class="form-group">
+                <label for="city">city</label>
+                <select name="city" class="form-control" id="city" ngModel>
+                  <option [value]="city" *ngFor="let c of city" >
+                      {{c}}
+                  </option>
+              </select>
+          
+            </div>
+            <label><b>Gender:</b></label>
+            <div class="form-group" *ngFor="let gender of genderArr">
+            <input  type="radio" id="{{gender.id}}" name="gender" value="{{gender.value}}" class="custom-control-input" [ngModel]="defgender">
+              <label for="{{gender.id}}" class="custom-control-label">{{gender.value}}</label>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input required type="password" id="password" name="password"
+             class="form-control" ngModel #passwordInput="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input required type="password" id="confirmPassword"
+             name="confirmPassword" class="form-control" ngModel #confirmPasswordInput="ngModel">
+             <small class="text-danger" *ngIf="passwordInput.value !== confirmPasswordInput.value && (confirmPasswordInput.dirty || confirmPasswordInput.touched)">
+                Passwords do not match.
+              </small>
+        </div>
+
+      <div class="col-md-12 text-center">
+        <button type="submit" class="btn btn-primary" >Submit</button>
+      </div>
+        </form>
+        </div>
+      </div>
+    </div>
+        
+<!--         
+        <form>
+  <label for="age">Age:</label>
+  <input type="number" id="age" name="age" [(ngModel)]="age" required ngPattern="/^(1[78]|20)$/" />
+  <div *ngIf="myForm.controls['age'].invalid && (myForm.controls['age'].dirty || myForm.controls['age'].touched)">
+    <div *ngIf="myForm.controls['age'].errors.required">Age is required.</div>
+    <div *ngIf="myForm.controls['age'].errors.pattern">Age must be between 17 and 20.</div>
+  </div>
+</form> -->
+
+<!-- ng-pattern="/^(?:1[8-9]|[2-5][0-9]|20)$/" -->

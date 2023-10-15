@@ -1,0 +1,28 @@
+<p>switchcase-assignment works!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <select class="form-control" (change)="getSelectedValue($event)" >
+                <option value="Default"> Select color</option>
+                <option style="background-color: pink;" value="pink">pink</option>
+                <option style="background-color: green;" value="black">green</option>
+                <option style="background-color: orange;" value="orange">orange</option>
+               
+            </select>
+        </div>
+        <div class="col-md-12" [ngSwitch]="selectedValue">
+            <h2 style="color: pink;" *ngSwitchCase="'pink'">
+                pink
+            </h2>
+            
+            <h2 style="color:green;" *ngSwitchCase="'black'">
+                green
+            </h2>
+            
+            <h2 style="color: orange;" *ngSwitchCase="'orange'">
+                orange
+            </h2>
+        </div>
+    </div>
+</div>

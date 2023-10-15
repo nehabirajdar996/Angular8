@@ -1,0 +1,32 @@
+<p>ngfor-assign works!</p>
+<div class="select">
+    <h4 class="country">Select Country</h4> 
+<select (change)="onClick($event)">
+    <option value="">Select Country</option>
+    <option value="{{c.id}}" *ngFor="let c of countries">{{c.name}}</option>
+</select>
+
+
+<select class="sele">
+    <option value="">Select States</option>
+    <option value="{{s.id}}" *ngFor="let s of states">{{s.name}}</option>
+</select>
+</div>
+
+<div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>TOP THREE COURSES</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of output.slice(0,3) ;">
+                <td >{{c.t1}}</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>

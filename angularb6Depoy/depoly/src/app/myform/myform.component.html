@@ -1,0 +1,31 @@
+<div  [formGroup]="myreactiveform" (ngSubmit)="onsubmit()">
+    <div>
+        <label for="name">name</label>
+      <input type="text" formControlname="name" >
+    </div>
+    <div>
+        <label for="DOB">DOB</label>
+        <input type="date" formControlName="DOB">
+    </div>
+    <div>
+        <button type="submit">sumbit</button>
+    </div>
+</div>
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+<div [formGroup] ="myreactiveform" (ngsumbit)="onsubmit()">
+<div>
+    <label for="name">name</label>
+    <input type="text" formControlName="name">
+</div>
+<div>
+    <label for="dob" >DOB</label>
+    <input type="text" formControlName="name">
+
+</div>
+<div>
+    <button type="sumbit">sumbit</button>
+</div>
+</div>

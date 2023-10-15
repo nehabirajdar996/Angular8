@@ -1,0 +1,82 @@
+<div class="container" *ngFor="let m of arraylist">
+<h6><i>matchId</i></h6>
+       <p> 
+       * seriesId: {{m.matchInfo.seriesId}}<br>
+       * seriesName: {{m.matchInfo.seriesName}}<br>
+       * matchDesc: {{m.matchInfo.matchDesc}}<br>
+       * matchFormat: {{m.matchInfo.matchFormat}}<br>
+       * startDate: {{m.matchInfo.startDate}}<br>
+       * endDate: {{m.matchInfo.endDate}}<br>
+       * state: {{m.matchInfo.state}}<br>
+       * status: {{m.matchInfo.status}}<br>
+       </p>
+       <ul>
+        <p><b><i>team1:</i></b></p>
+        <li>teamId:{{m.matchInfo.team1.teamId}}</li>
+        <li>teamName: {{m.matchInfo.team1.teamName}}</li>
+        <li>teamSName: {{m.matchInfo.team1.teamSName}}</li>
+        <li>imageId: {{m.matchInfo.team1.imageId}}</li>
+       </ul>
+       
+       <ul>
+        <p><b><i>team2:</i></b></p>
+        <li>teamId:{{m.matchInfo.team2.teamId}}</li>
+        <li>teamName: {{m.matchInfo.team2.teamName}}</li>
+        <li>teamSName: {{m.matchInfo.team2.teamSName}}</li>
+        <li>imageId: {{m.matchInfo.team2.imageId}}</li>
+       </ul>
+
+       <ul>
+        <p><b><i>venueInfo</i></b></p>
+          <li>"id": {{m.matchInfo.venueInfo.id}}</li>
+          <li>"ground": {{m.matchInfo.venueInfo.ground}}</li>
+          <li>"city": {{m.matchInfo.venueInfo.city}}</li>
+          <li>"timezone": {{m.matchInfo.venueInfo.timezone}}</li>
+          <li>"latitude":{{m.matchInfo.venueInfo.latitude}}</li>
+          <li>"longitude": {{m.matchInfo.venueInfo.longitude}}</li>
+        
+       </ul>
+       <p>*currBatTeamId: {{m.matchInfo.currBatTeamId}}</p>
+       <p>*seriesStartDt: {{m.matchInfo.seriesStartDt}}</p>
+       <p>*seriesEndDt: {{m.matchInfo.seriesEndDt}}</p>
+       <p>*isTimeAnnounced: {{m.matchInfo.isTimeAnnounced}}</p>
+       <p>*stateTitle: {{m.matchInfo.stateTitle}}</p>
+     
+    <p><li><b>matchScore</b></li></p>
+    <ul>
+        <p>** team1Score: ** </p>
+        <p><b>inning1:</b></p>
+        <li>"inningsId": {{m.matchScore.team1Score.inngs1.inningsId}}</li>
+        <li> "runs": {{m.matchScore.team1Score.inngs1.runs}}</li>
+        <li> "wickets": {{m.matchScore.team1Score.inngs1.wickets}}</li>
+        <li> "overs": {{m.matchScore.team1Score.inngs1.overs}}</li>
+
+        <p><b>inning2:</b></p><br>
+        <li>"inningsId": {{m.matchScore.team1Score.inngs2.inningsId}}</li>
+        <li> "runs": {{m.matchScore.team1Score.inngs2.runs}}</li>
+        <li> "wickets": {{m.matchScore.team1Score.inngs2.wickets}}</li>
+        <li> "overs": {{m.matchScore.team1Score.inngs2.overs}}</li>
+        <li>"isDeclared": {{m.matchScore.team1Score.inngs2.isDeclared}}</li>
+    </ul>
+     <ul>
+        <p>"team2Score"</p>
+            <p><b>"inngs1"</b></p>
+                <li>"inningsId": {{m.matchScore.team2Score.inngs1.inningsId}}</li>
+                <li>runs": {{m.matchScore.team2Score.inngs1.runs}}</li>
+               <li> "wickets": {{m.matchScore.team2Score.inngs1.wickets}}</li>
+               <li> "overs": {{m.matchScore.team2Score.inngs1.overs}}</li>
+            </ul>
+            <ul>
+                
+                    <p><b>"inngs2"</b></p>
+                        <li>"inningsId": {{m.matchScore.team2Score.inngs2.inningsId}}</li>
+                        <li>runs": {{m.matchScore.team2Score.inngs2.runs}}</li>
+                       <li> "wickets": {{m.matchScore.team2Score.inngs2.wickets}}</li>
+                       <li> "overs": {{m.matchScore.team2Score.inngs2.overs}}</li>
+                    </ul>
+            
+
+        
+    
+</div>
+
