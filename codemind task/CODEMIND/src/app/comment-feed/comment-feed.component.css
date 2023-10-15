@@ -38,7 +38,10 @@
     background-color: #0056b3;
   }
   
-
+img{
+  width: 200px;
+  height:200px;
+}
   
   #comment{
     margin-top: 50px;

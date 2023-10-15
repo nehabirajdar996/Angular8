@@ -15,19 +15,21 @@
   <img *ngIf="imageSrc" [src]="imageSrc" alt="Uploaded Image" />
 
 
-  <div class="comments">
+  <div class="comments"  >
     <div *ngFor="let comment of comments">
       <div> {{ comment.text }}</div>
-      <a style="margin-top: 50px;"  (click)="likeComment(comment)"> <i style="color: red;" class="fa fa-heart" aria-hidden="true"></i> likes: {{comment.likes}} </a>
-
+      <a style="margin-botton: 100px;"  (click)="likeComment(comment)"> <i style="color: red;" class="fa fa-heart" aria-hidden="true"></i> likes: {{comment.likes}} </a>
+    </div>
+      {{add}}
       <div id="comment">
+        
       <mat-form-field >
+       
         <input matInput #myclick placeholder="Enter your comment" />
-        {{add}}
         <button (click)="click(myclick.value)"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
       </mat-form-field>
     </div>
 
-    </div>
+    
   </div>
 </div>
