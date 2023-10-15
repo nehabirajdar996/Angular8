@@ -1,8 +1,11 @@
 <div class="container">
-  <h2>Image Comments</h2>
 
+  <mat-form-field  style="margin-left:50px;width:300px;">
+    
+  <input matInput placeholder="Say something..." [(ngModel)]="newComment">
+</mat-form-field>
   <!-- Input for comments -->
-  <input [(ngModel)]="newComment" placeholder="Enter your comment" />
+  <!-- <input [(ngModel)]="newComment" placeholder="Enter your comment" /> -->
 
   <!-- Image upload input -->
   <input type="file" (change)="onFileSelected($event)" accept="image/*" />

@@ -15,7 +15,7 @@
       <mat-error *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">Password is required</mat-error>
     </mat-form-field>
 </div>
-    <button style="margin-left: 150px;" mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid" >Login</button>
+    <button style="margin-left: 150px;" mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid" routerLink="/imagePostPage">Login</button>
 
     <div>
     <h3 style="margin-left: 175px; margin-top:20px">OR</h3>
