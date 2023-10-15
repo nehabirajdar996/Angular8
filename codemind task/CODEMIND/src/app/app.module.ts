@@ -10,7 +10,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { ImagePostPageComponent } from './image-post-page/image-post-page.component';
 import { CommentFeedComponent } from './comment-feed/comment-feed.component';
 import {  HttpClient, HttpClientModule } from '@angular/common/http';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
@@ -24,7 +23,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     AppComponent,
     LoginPageComponent,
     CreateAccountComponent,
-    ImagePostPageComponent,
     CommentFeedComponent
   ],
   imports: [

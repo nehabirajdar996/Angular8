@@ -10,24 +10,21 @@
   <!-- Post button -->
   <button (click)="postComment()">Post</button>
 
-  <!-- Display images and comments from allDetails array -->
-  <div class="comments" *ngFor="let detail of allDetails">
-    <!-- Check if the image property is not an empty string -->
-    <ng-container *ngIf="detail.image">
-      <img src="./{{detail}}" alt="Uploaded Image" />
-    
-    
+  <!-- Display the image -->
+ 
+  <img *ngIf="imageSrc" [src]="imageSrc" alt="Uploaded Image" />
 
-      <div *ngFor="let comment of detail.comment">
-        <div>{{ comment.text }}</div>
-        <a (click)="likeComment(comment)"><i style="color: red;" class="fa fa-heart" aria-hidden="true"></i>  {{comment.likes}} liked it</a>
 
-        <!-- Add comment input for each comment -->
-        <mat-form-field class="example-full-width">
-          <input matInput #myclick placeholder="Enter your comment" />
-          <button (click)="click(myclick.value)">clickme</button>
-        </mat-form-field>
-      </div>
-    </ng-container>
+ 
+  <div class="comments">
+    <div *ngFor="let comment of comments">
+      <div> {{ comment.text }}</div>
+      <a (click)="likeComment(comment)"> <i style="color: red;" class="fa fa-heart" aria-hidden="true"></i> likes: {{comment.likes}} </a>
+      <mat-form-field class="example-full-width">
+        <input matInput #myclick placeholder="Enter your comment" />
+        {{add}}
+        <button (click)="click(myclick.value)">clickme</button>
+      </mat-form-field>
+    </div>
   </div>
 </div>
