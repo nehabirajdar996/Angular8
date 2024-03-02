@@ -1,0 +1,68 @@
+
+<div class="container">
+  <form  [formGroup]="reactiveForm" (ngSubmit)="onsumbit()" class="border p-3">
+  <div class="row g-0">
+    <div class="col text-center p-2 mb-3 bg-light">
+    <span class="fs-3">Register</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+    <label for="firstName" class="form-label">firstName</label>
+    <input type="text"  class="form-control"  id="firstName" formControlName="firstName">
+    </div>
+    <div class="col">
+    <label for="lastName" class="form-label">lastName</label>
+    <input type="text" class="form-control"  id="lastName" formControlName="lastName"> 
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col mb-3">
+    <label for="email" class="form-label">email</label>
+    <input type="email"  class="form-control"   id="email" formControlName="email">
+  </div>
+</div>
+
+<div class="row">
+<div class="col mb-3">
+  <label for="mobile" class="form-label">mobile number</label>
+  <input type="text"  class="form-control" id="mobile" formControlName="mobile">
+  </div>
+
+ <div class="col ps-3">
+    <div class="m-1">Gender</div>
+    <div class="form-check form-check-inline">
+       <input type="radio"  id="male" class="form-check-input" value="m" formControlName="gender" >
+       <label for="male" class="form-check-label" >male</label>
+     </div>
+   <div class="form-check form-check-inline">
+      <input type="radio"  id="female" class="form-check-input" value="f"  formControlName="gender">
+      <label for="female" class="form-check-label" >female</label>
+   </div>
+ </div>
+</div>
+
+<div class="row">
+  
+</div>
+<div class="row">
+  <div class="col">
+  <label for="password" class="form-label">password</label>
+  <input type="text"  class="form-control"  id="password"  formControlName="password">
+  </div>
+  <div class="col">
+  <label for="Repeate" class="form-label">Repeate password</label>
+  <input type="text" class="form-control"  id="Repeate" formControlName="Repeate">
+  </div>
+</div>
+<div class="row mt-3">
+  <div class="col-6 offset-3">
+    <div class="d-grid">
+      <button type="submit" class="btn btn-primary">Sumbit</button>
+    </div>
+  </div>
+</div>
+
+</form>
+</div>

@@ -1,0 +1,19 @@
+
+<table>
+    <thead>
+       <th>id</th>
+       <th>firstname</th>
+       <th>lastname</th>
+       <th>email</th>
+       <th>birthdate</th>
+    </thead>
+    <tbody>
+     <tr *ngFor="let data of dataToShow">
+        <td>{{data.id}}</td>
+        <td>{{data.firstname}}</td>
+        <td>{{data.lastname}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.birthDate}}</td>
+     </tr>
+    </tbody>
+</table>

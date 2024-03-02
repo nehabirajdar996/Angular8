@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "hello world"
+    },
+    {
+      "id": 2,
+      "title": "hi"
+    },
+    {
+      "id": 1706889723529,
+      "title": "practice decorator"
+    },
+    {
+      "id": 1706889727943,
+      "title": "practice decorator"
+    },
+    {
+      "id": 1706889734220,
+      "title": "practice decorator"
+    }
+  ]
+}

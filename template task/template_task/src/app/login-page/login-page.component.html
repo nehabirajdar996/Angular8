@@ -1,0 +1,27 @@
+
+
+      <div id="form" class="rounded shadow py-5">
+        <div class="div">
+        <img  id="img"  src="assets/img/Vector.png" class="logo">
+    </div>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div>
+            <mat-form-field appearance="outline" style="margin-left:auto;width:300px;">
+              <input class="form-control-lg" matInput placeholder="Username" formControlName="username">
+              <mat-error  style="color: red; background-color:pink;"   *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">Username is required</mat-error>
+            </mat-form-field>
+            </div>
+            <div>
+            <mat-form-field appearance="outline" style="margin-left:1px ; width: 300px;">
+                <input  class="form-control-lg"  matInput type="password" placeholder="Password" formControlName="password">
+              <mat-error style="color: red;"   *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">Password is required</mat-error>
+            </mat-form-field>
+        </div>
+            <button style="width:130%;background-color: rgb(224, 150, 13);margin-left:6px;"   mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid" routerLink="/dashboard">SIGN IN</button>
+         <div>
+            <a style="margin-left:100px; margin-top:100px ;" routerLink="/account">Forget Password?</a>
+           </div>
+        
+          </form>
+        </div>
+          

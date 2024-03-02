@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+            <h3>Template</h3>
+        </div>
+        <div class="col-2" style="margin-top:10px;">
+            <button type="button"  routerLink="/create"      style="background-color: orange; color: white;">Create Template</button>
+
+        </div>
+    </div>
+</div>
+
+<hr>
+<div class="container">
+<div class="row">
+    <div class="col-3">
+        <p>start Date</p>
+        <input type="date">
+    </div>
+    <div class="col-3">
+        <p>End Date</p>
+        <input type="date">
+    </div>
+    <div class="col-3">
+        <p>Region</p>
+
+        <select name="cars" id="cars">
+          <option value="select">select</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+        
+    </div>
+    <div class="col-3">
+        <button  style="background-color:orange;margin-top: 40px;margin-left: 0;"  type="button">search</button>
+    </div>
+
+    <div class="div">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Template ID</th>
+                <th scope="col">Template name</th>
+                <th scope="col">Region</th>
+                <th scope="col">Modified by</th>
+                <th scope="col">Modified on</th>
+                <th scope="col">Action</th>
+
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>T01</td>
+                <td>US-FDA-01</td>
+                <td>USA</td>
+                <td>Cunesoft Support</td>
+                <td>01-01-1970</td>
+                <td><a routerLink="edit"><i class="fa fa-edit" style="font-size:24px"></i></a>
+                </td>
+
+
+
+              </tr>
+              <tr>
+                <td>T02</td>
+                <td>US-FDA-02</td>
+                <td>USA</td>
+                <td>Cunesoft Support</td>
+                <td>01-01-1970</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>T03</td>
+                <td>Europe-CESP-01</td>
+                <td>Europe</td>
+                <td>Cunesoft Support</td>
+                <td>01-01-1970</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+</div>
+

@@ -1,0 +1,65 @@
+
+
+
+
+     <mat-sidenav-container style="height: 100vh;">
+        <mat-sidenav mode="side" opened style="background-color: orange;height: 100%;"  id="side">
+            <img style="width:100px; height:100px;background-color: wheat;"   src="assets/img/Vector.png" class="logo">         
+
+          <div  style="padding-top:50px;">
+            
+            
+            <div class="dropdown">
+                <button class="dropbtn" style="background-color: orange; margin-left: 30px;">Dropdown</button>
+                <div class="dropdown-content">
+                  
+                    <a  style="color: white;margin-left: 30px;"  routerLink="temp">Template</a>
+                </div>
+              </div>
+           
+              
+
+              
+          </div>              
+    
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+<div class="container-fluid"  style="background-color: orange;">
+
+  <mat-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>product info</ng-template>
+        
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Manage Document">
+      <form [formGroup]="secondFormGroup">
+        
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+      </mat-step>
+      </mat-stepper>
+     </div>
+<router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+
+        
+            
+  

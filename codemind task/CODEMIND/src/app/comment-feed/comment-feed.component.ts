@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../service.service';
 
 @Component({
@@ -7,15 +7,21 @@ import { ServiceService } from '../service.service';
   templateUrl: './comment-feed.component.html',
   styleUrls: ['./comment-feed.component.css']
 })
-export class CommentFeedComponent {
+export class CommentFeedComponent implements OnInit {
   newComment: string = '';
   comments: Comment[] = [];
   images: ImageWithComments[] = [];
   imageSrc: string = '';
   liked: boolean = false;
   add: any;
+  imgaearray: any;
 
   constructor(private servicedata: ServiceService, private http: HttpClient) {}
+
+  
+   ngOnInit(){
+    this.getimage();
+  }
 
   onFileSelected(event: any) {
     const file = event.target.files[0];
@@ -36,15 +42,14 @@ export class CommentFeedComponent {
 
       const data = {
         image: this.imageSrc,
-        
-      };
-
-  
+        comment: this.comments};
       this.servicedata.postdata(data).subscribe((res) => {
         console.log('Post data', res);
       });
     }
   }
+
+  
 
   click(a: any) {
     this.add = a;
@@ -54,11 +59,20 @@ export class CommentFeedComponent {
 
   likeComment(comment: Comment) {
     comment.likes++;
-    this.liked = true;
+    
   }
+
+  getimage(){
+    this.servicedata.getdata().subscribe(res=>{
+      this.imgaearray = res;
+      console.log('my data',this.imgaearray)
+    })
+  }
+
+ 
 }
 
-interface Comment {
+interface Comment { // interface has only abstract method means you need to provide implimenation
   text: string;
   likes: number;
 }

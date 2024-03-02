@@ -1,0 +1,88 @@
+{
+  "empolyee": [
+    {
+      "firstName": "sss",
+      "lastName": "",
+      "email": "",
+      "dob": "",
+      "gender": "",
+      "education": "",
+      "company": "",
+      "experiance": "",
+      "package": "",
+      "id": 2
+    },
+    {
+      "firstName": "sunita",
+      "lastName": "koli",
+      "email": "",
+      "dob": "",
+      "gender": "",
+      "education": "",
+      "company": "",
+      "experiance": "",
+      "package": "",
+      "id": 3
+    },
+    {
+      "firstName": "neha",
+      "lastName": "koli",
+      "email": "nehakoli0606@gmail.com",
+      "dob": "2024-01-22T18:30:00.000Z",
+      "gender": "Female",
+      "education": "Diploma",
+      "company": "333",
+      "experiance": "333",
+      "package": "3",
+      "id": 4
+    },
+    {
+      "firstName": "kavita",
+      "lastName": "",
+      "email": "",
+      "dob": "",
+      "gender": "",
+      "education": "",
+      "company": "",
+      "experiance": "",
+      "package": "",
+      "id": 5
+    },
+    {
+      "firstName": "dddd",
+      "lastName": "",
+      "email": "",
+      "dob": "",
+      "gender": "",
+      "education": "",
+      "company": "",
+      "experiance": "",
+      "package": "",
+      "id": 7
+    },
+    {
+      "firstName": "n",
+      "lastName": "",
+      "email": "",
+      "dob": "",
+      "gender": "",
+      "education": "",
+      "company": "",
+      "experiance": "",
+      "package": "",
+      "id": 8
+    },
+    {
+      "firstName": "aaa",
+      "lastName": "",
+      "email": "",
+      "dob": "",
+      "gender": "",
+      "education": "",
+      "company": "",
+      "experiance": "",
+      "package": "",
+      "id": 9
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+.container{
+    border: 8px solid black;
+}
+body{
+    background-color: grey;
+}
+#header{
+padding: 10px 0 10px 10px;
+background-color: rgb(247, 181, 60);
+
+}
+#menu{
+    background-color: pink;
+    padding: 3px 10px ;
+    
+}
+#menu ul{
+ list-style: none;
+}
+#menu ul li{
+  display: inline-block;
+}
+#content{
+ background-color: white;
+}
+#sidebar{
+    background-color: lightblue;
+}
+#footer{
+    background-color: orange;
+}
